@@ -13,14 +13,14 @@
       <h1>UnEat</h1>
   </ion-row>
   <ion-row justify-content-center align-tems-center>
-    <form>
+    <form (ngSubmit)="login()" [formGroup]="form">
       <ion-item>
         <ion-label>Correo</ion-label>
-        <ion-input type="text" placeholder="Johnny@aol.com"></ion-input>
+        <ion-input type="text" name = "correo" formControlName = "correo" placeholder="Johnny@aol.com"></ion-input>
       </ion-item>
       <ion-item>
           <ion-label>Contraseña</ion-label>
-          <ion-input type="text" placeholder="......"></ion-input>
+          <ion-input type="text" name = "correo" formControlName = "contraseña" placeholder="......"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Recuérdame</ion-label>
