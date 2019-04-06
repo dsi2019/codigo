@@ -81,24 +81,23 @@ var RegistrarPage = /** @class */ (function () {
     }
     RegistrarPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad RegistrarPage');
+        console.log(this.form.value);
     };
     RegistrarPage.prototype.registrar = function () {
         var _this = this;
         var data = this.form.value;
-        var credentials = {
-            email: data.email,
-            password: data.password
-        };
         console.log("registering");
-        this.auth.registrar(credentials).then(function () { return _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__home_home__["a" /* HomePage */]); }, function (error) { return _this.registrarError = error.message; });
+        console.log(data);
+        this.auth.registrar({ email: data.correo, password: data.contraseña }).then(function () { return _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__home_home__["a" /* HomePage */]); }, function (error) { return _this.registrarError = error.message; });
     };
     RegistrarPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-registrar',template:/*ion-inline-start:"/Users/siddsrinivasan/Desktop/codigo/src/pages/registrar/registrar.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Registrar</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <br>\n    <ion-row justify-content-center align-items-center style="height: 40%">\n        <img src="../assets/icon/logo.png" height= "200">\n    </ion-row>\n    <ion-row justify-content-center align-items-center style ="height: 10%">\n        <h1>UnEat</h1>\n    </ion-row>\n    <form ngSubmit="registrar()" [formGroup]="form">\n        <ion-list inset>\n            <ion-item>\n                <ion-label>Nombre</ion-label>\n                <ion-input type="nombre" placeholder="Chris Caliente"></ion-input>\n              </ion-item>\n          <ion-item>\n            <ion-label>Correo</ion-label>\n            <ion-input type="correo" placeholder="Johnny@aol.com"></ion-input>\n          </ion-item>\n          <ion-item>\n              <ion-label>Contraseña</ion-label>\n              <ion-input type="contraseña" placeholder="......"></ion-input>\n          </ion-item>\n        </ion-list>\n        <div padding-horizontal>\n          <button ion-button full round type="submit">Regístrate</button>\n        </div>\n      </form>\n</ion-content>'/*ion-inline-end:"/Users/siddsrinivasan/Desktop/codigo/src/pages/registrar/registrar.html"*/,
+            selector: 'page-registrar',template:/*ion-inline-start:"/Users/siddsrinivasan/Desktop/codigo/src/pages/registrar/registrar.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Registrar</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <br>\n    <ion-row justify-content-center align-items-center style="height: 40%">\n        <img src="../assets/icon/logo.png" height= "200">\n    </ion-row>\n    <ion-row justify-content-center align-items-center style ="height: 10%">\n        <h1>UnEat</h1>\n    </ion-row>\n    <form (ngSubmit)="registrar()" [formGroup]="form">\n        <ion-list inset>\n            <ion-item>\n                <ion-label>Nombre</ion-label>\n                <ion-input type="text" name = "nombre" formControlName = "nombre" placeholder="Chris Caliente"></ion-input>\n              </ion-item>\n          <ion-item>\n            <ion-label>Correo</ion-label>\n            <ion-input type="text" name = "correo" formControlName = "correo" placeholder="Johnny@aol.com"></ion-input>\n          </ion-item>\n          <ion-item>\n              <ion-label>Contraseña</ion-label>\n              <ion-input type="text" name = "contraseña" formControlName = "contraseña"  placeholder="......"></ion-input>\n          </ion-item>\n        </ion-list>\n        <div padding-horizontal>\n          <button ion-button full round type="submit">Regístrate</button>\n        </div>\n      </form>\n</ion-content>'/*ion-inline-end:"/Users/siddsrinivasan/Desktop/codigo/src/pages/registrar/registrar.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_auth_service__["a" /* AuthService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _d || Object])
     ], RegistrarPage);
     return RegistrarPage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=registrar.js.map

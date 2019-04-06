@@ -26,17 +26,15 @@ export class RegistrarPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegistrarPage');
+    console.log(this.form.value);
   }
 
 
 registrar(){
   let data = this.form.value;
-  let credentials = {
-    email: data.email,
-    password: data.password
-  };
   console.log("registering");
-  this.auth.registrar(credentials).then(
+  console.log(data);
+  this.auth.registrar({email:data.correo, password:data.contraseña}).then(
     () => this.navCtrl.setRoot(HomePage),
     error => this.registrarError = error.message
   );
