@@ -28,13 +28,16 @@
     "firebase": "^5.9.2",
     "ionic-angular": "3.9.3",
     "ionicons": "3.0.0",
+    "json5": "^2.1.0",
     "rxjs": "5.5.11",
     "sw-toolbox": "3.6.0",
+    "tsutils": "^3.10.0",
     "zone.js": "0.8.29"
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.2.3",
     "@ionic/lab": "1.0.24",
+    "debug": "^4.1.1",
     "typescript": "~2.6.2"
   },
   "description": "An Ionic project"
