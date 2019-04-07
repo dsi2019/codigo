@@ -15,17 +15,19 @@
     </ion-title>
   </ion-row>
   <ion-list>
-    <ion-card ion-item dark *ngFor="let cafeteria of cafeterias" >
+    <ion-card ion-item *ngFor="let cafeteria of cafeterias" >
         <ion-card-header>
           <ion-item>
-              <img  class="full-image" src={{cafeteria.foto_url}}>
+              <img style ="object-fit: cover; height:60px"  class="full-image" src={{cafeteria.foto_url}}>
           </ion-item>
           <ion-card-subtitle>{{cafeteria.campus}}</ion-card-subtitle>
           <ion-card-title>{{cafeteria.nombre}}</ion-card-title>
+          Abierto: 
+          <b>{{cafeteria.hora_de_abrir.hours}}:{{cafeteria.hora_de_abrir.minutes}} 
+          - {{cafeteria.hora_de_cerrar.hours}}:{{cafeteria.hora_de_cerrar.minutes}} 
+          </b>
         </ion-card-header>
         <ion-card-content>
-          Abierto: {{cafeteria.hora_de_abrir.hours}}:{{cafeteria.hora_de_abrir.minutes}} 
-          - {{cafeteria.hora_de_cerrar.hours}}:{{cafeteria.hora_de_cerrar.minutes}} 
         </ion-card-content>
     </ion-card>
   </ion-list>

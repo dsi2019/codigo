@@ -25696,3 +25696,8 @@ page-home h1 {
   font-size: 64px;
   text-align: center;
 }
+
+page-home ion-card-subtitle {
+  color: grey;
+  text-align: center;
+}
