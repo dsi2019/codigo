@@ -339,15 +339,14 @@ var MyApp = /** @class */ (function () {
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */]),
-        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */]) === "function" && _a || Object)
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/siddsrinivasan/Desktop/codigo/src/app/app.html"*/'\n<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/siddsrinivasan/Desktop/codigo/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_6__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__services_auth_service__["a" /* AuthService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_7__services_cafeteria_service__["a" /* CafeteriaService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__services_cafeteria_service__["a" /* CafeteriaService */]) === "function" && _f || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_6__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_7__services_cafeteria_service__["a" /* CafeteriaService */]])
     ], MyApp);
     return MyApp;
-    var _a, _b, _c, _d, _e, _f;
 }());
 
 //# sourceMappingURL=app.component.js.map
@@ -447,7 +446,7 @@ var HomePage = /** @class */ (function () {
     ;
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/siddsrinivasan/Desktop/codigo/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <br>\n  <ion-row justify-content-center align-items-center style="height: 50%">\n      <img src="../assets/icon/logo.png" height= "200">\n  </ion-row>\n  <ion-list>\n    <ion-card ion-item *ngFor="let cafeteria of cafeterias" >\n        <ion-card-header>\n          <ion-card-subtitle>{{cafeteria.campus}}</ion-card-subtitle>\n          <ion-card-title>{{cafeteria.nombre}}</ion-card-title>\n        </ion-card-header>\n        <ion-card-content>\n          Abierto: {{cafeteria.hora_de_abrir.hours}}:{{cafeteria.hora_de_abrir.minutes}} \n          - {{cafeteria.hora_de_cerrar.hours}}:{{cafeteria.hora_de_cerrar.minutes}} \n        </ion-card-content>\n    </ion-card>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/siddsrinivasan/Desktop/codigo/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/siddsrinivasan/Desktop/codigo/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <br>\n  <ion-row justify-content-center align-items-center>\n    <ion-title>\n      Cafeterías\n    </ion-title>\n  </ion-row>\n  <ion-list>\n    <ion-card ion-item dark *ngFor="let cafeteria of cafeterias" >\n        <ion-card-header>\n          <ion-item>\n              <img  class="full-image" src={{cafeteria.foto_url}}>\n          </ion-item>\n          <ion-card-subtitle>{{cafeteria.campus}}</ion-card-subtitle>\n          <ion-card-title>{{cafeteria.nombre}}</ion-card-title>\n        </ion-card-header>\n        <ion-card-content>\n          Abierto: {{cafeteria.hora_de_abrir.hours}}:{{cafeteria.hora_de_abrir.minutes}} \n          - {{cafeteria.hora_de_cerrar.hours}}:{{cafeteria.hora_de_cerrar.minutes}} \n        </ion-card-content>\n    </ion-card>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/siddsrinivasan/Desktop/codigo/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2__services_cafeteria_service__["a" /* CafeteriaService */]])
@@ -479,13 +478,22 @@ var CafeteriaService = /** @class */ (function () {
                 nombre: "Sabatini",
                 campus: "Leganes",
                 hora_de_abrir: { hours: 9, minutes: 0 },
-                hora_de_cerrar: { hours: 17, minutes: 30 }
+                hora_de_cerrar: { hours: 17, minutes: 30 },
+                foto_url: "../../assets/cafeterias/leganes_sabatini.jpg"
             },
             {
                 nombre: "Padre Soler",
                 campus: "Leganes",
                 hora_de_abrir: { hours: 9, minutes: 0 },
-                hora_de_cerrar: { hours: 17, minutes: 30 }
+                hora_de_cerrar: { hours: 17, minutes: 30 },
+                foto_url: "../../assets/cafeterias/leganes_padre_soler.jpg"
+            },
+            {
+                nombre: "Padre Soler",
+                campus: "Leganes",
+                hora_de_abrir: { hours: 9, minutes: 0 },
+                hora_de_cerrar: { hours: 17, minutes: 30 },
+                foto_url: "../../assets/cafeterias/leganes_padre_soler.jpg"
             },
         ];
     }

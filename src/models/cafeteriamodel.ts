@@ -5,4 +5,5 @@ export interface Cafeteria {
     campus: string;
     hora_de_abrir: Time;
     hora_de_cerrar: Time;
+    foto_url: string;
  };
