@@ -1,6 +1,6 @@
 import { Time } from "@angular/common";
 
-export interface Cafetería {
+export interface Cafeteria {
     nombre: string;
     campus: string;
     hora_de_abrir: Time;

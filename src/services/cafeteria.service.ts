@@ -1,12 +1,12 @@
 import​ { ​Injectable​ } ​from​ ​"@angular/core"​;
 import​ { ​AngularFireDatabase​ } ​from​ ​"angularfire2/database"​;
-import { Cafetería } from "../models/cafeteríamodel";
+import { Cafeteria } from "../models/cafeteriamodel";
 import { Time} from "@angular/common";
 
 @​Injectable​()
-export class CafeteríaService{
+export class CafeteriaService{
 
-    private cafeterías: Cafetería[] = [
+    private cafeterias: Cafeteria[] = [
         {
         nombre: "Sabatini",
         campus: "Leganes",
@@ -22,8 +22,8 @@ export class CafeteríaService{
 
     ];
 
-    getCafeterías(){
-        return this.cafeterías;
+    getCafeterias(){
+        return this.cafeterias;
     }
 
 }

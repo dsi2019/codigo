@@ -1,21 +1,21 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { CafeteríaService } from '../../services/cafetería.service';
-import { Cafetería } from '../../models/cafeteríamodel';
+import { CafeteriaService } from '../../services/cafeteria.service';
+import { Cafeteria } from '../../models/cafeteriamodel';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-  cafeterías: Cafetería[]= [];  
+  cafeterias: Cafeteria[]= [];  
   constructor(public navCtrl: NavController,
-    private cafeteríaService: CafeteríaService) {
+    private cafeteriaService: CafeteriaService) {
 
   }
 
   ionViewWillEnter(){
-    this.cafeterías = this.cafeteríaService.getCafeterías();
+    this.cafeterias = this.cafeteriaService.getCafeterias();
   };
 }

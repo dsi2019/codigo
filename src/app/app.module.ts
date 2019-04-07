@@ -17,6 +17,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { LoginPage } from '../pages/login/login';
 import { RegistrarPage } from '../pages/registrar/registrar';
 import { AuthService } from '../services/auth.service';
+import {CafeteriaService} from '../services/cafeteria.service';
 
 import { FormsModule }   from '@angular/forms';
 
@@ -44,6 +45,8 @@ import { FormsModule }   from '@angular/forms';
     providers: [
     AngularFireAuth,
     AuthService,
+    CafeteriaService,
+
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
