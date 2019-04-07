@@ -20,6 +20,10 @@ export class CafeteríaService{
         hora_de_cerrar: {hours:17,minutes:30}
         },
 
-    ]
+    ];
+
+    getCafeterías(){
+        return this.cafeterías;
+    }
 
 }
