@@ -22,7 +22,7 @@ var RegistrarPageModule = /** @class */ (function () {
     function RegistrarPageModule() {
     }
     RegistrarPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_2__registrar__["a" /* RegistrarPage */],
             ],

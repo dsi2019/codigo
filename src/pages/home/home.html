@@ -14,20 +14,14 @@
   </ion-row>
   <ion-list>
     <ion-card ion-item *ngFor="let cafeteria of cafeterias" >
-        <ion-grid>
-          <ion-row>
-              <ion-title>
-                  {{cafeteria.nombre}}
-              </ion-title>
-          </ion-row>
-          <ion-row>
-              <p>
-                  Abierto: {{cafeteria.hora_de_abrir.hours}}:{{cafeteria.hora_de_abrir.minutes}} 
-                  - {{cafeteria.hora_de_cerrar.hours}}:{{cafeteria.hora_de_cerrar.minutes}} 
-              <p>
-          </ion-row>
-          
-        </ion-grid>
+        <ion-card-header>
+          <ion-card-subtitle>{{cafeteria.campus}}</ion-card-subtitle>
+          <ion-card-title>{{cafeteria.nombre}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Abierto: {{cafeteria.hora_de_abrir.hours}}:{{cafeteria.hora_de_abrir.minutes}} 
+          - {{cafeteria.hora_de_cerrar.hours}}:{{cafeteria.hora_de_cerrar.minutes}} 
+        </ion-card-content>
     </ion-card>
   </ion-list>
 </ion-content>

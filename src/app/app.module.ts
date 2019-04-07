@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
+import { ErrorHandler, NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -31,9 +31,10 @@ import { FormsModule }   from '@angular/forms';
     imports: [
      BrowserModule,
      IonicModule.forRoot(MyApp),
+     IonicModule,
      AngularFireModule.initializeApp(FIREBASE_CONFIG),
      AngularFireDatabaseModule,
-     FormsModule
+     FormsModule,
      ],
     bootstrap: [IonicApp],
     entryComponents: [
@@ -50,6 +51,7 @@ import { FormsModule }   from '@angular/forms';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ]
+    ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}
